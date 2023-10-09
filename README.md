@@ -12,7 +12,6 @@ Dropping that pesky KV cache from $`O(LD)`$ to $`O(D^2)`$!
 First, do the [appropriate](#Usage) model surgery. Then, resume the original training objective. [Here's](https://huggingface.co/datasets/reversebutlerianjihad/AnorexicPajama) a dataset we used internally for a Llama 2 retrofit that's now in production.
 
 ## Installation
-Insta-wheel:
 ```bash
 pip install git+https://github.com/notarussianteenager/srf-attention
 ```
