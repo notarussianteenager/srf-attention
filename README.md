@@ -3,10 +3,10 @@ Simplex Random Feature attention, in PyTorch
 
 ## A Prelude
 ### Why? What? Huh?
-Softmax attention ate the world. But now it's eating our wallets. Luckily enough for us wordcels, those nifty shape rotators realized that even though softmax isn't stationary, it's amenable to Monte Carlo methods. Translation: we can retrofit pretrained LLMs for recurrent inference, with a little fine tuning! Smarter men than I proceeded to publish [this](https://arxiv.org/abs/2009.14794), [this](https://arxiv.org/abs/2205.15317), and [that](https://arxiv.org/abs/2301.13856). This repo is a PyTorch implementation of "that", with some syntactic sugar added to aid digestion. Just drop the Attention module into your code, in place of your SDP implementation, and fine tune under the ordinary training objective!
+Softmax attention ate the world. But now it's eating our wallets. Luckily enough for us wordcels, those nifty shape rotators realized that even though softmax isn't stationary, it's amenable to Monte Carlo methods. Translation: we can retrofit pretrained LLMs for recurrent inference, with a little fine tuning! Smarter men than I proceeded to publish [this](https://arxiv.org/abs/2009.14794), [this](https://arxiv.org/abs/2205.15317), and [that](https://arxiv.org/abs/2301.13856). This repo is a PyTorch implementation of "that", with some syntactic sugar added to aid digestion. Just drop the Attention module into your code, in place of your SDP implementation, and fine tune under the ordinary training objective.
 
 ### What is this good for?
-Efficiently retrofitting pretrained Transformers for recurrent inference! Drop that pesky KV cache from $`O(LD)`$ to $`O(D^2)`$!
+Dropping that pesky KV cache from $`O(LD)`$ to $`O(D^2)`$!
 
 ### Next steps
 First, do the [appropriate](#Usage) model surgery. Then, resume the original training objective. [Here's](https://huggingface.co/datasets/reversebutlerianjihad/AnorexicPajama) a dataset we used internally for a Llama 2 retrofit that's now in production.
