@@ -72,7 +72,7 @@ for module in model.modules():
 def resample_rfs(model):
   for module in model.modules():
     if isinstance(module, transformers.models.llama.modeling_llama.LlamaAttention):
-      module.attn_fn.redraw_(next(model.parameters()).device)
+      module.attn_fn.redraw_()
 
 ### Pseudo-code:
 optimizer = YourOptimizerHere()
